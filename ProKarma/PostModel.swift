@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+struct PostModel: Decodable {
+    let imageUrl: String
+    let title: String
+    
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "thumbnail"
+        case title
+    }
+}
+
+struct datum: Decodable {
+    let data: datumChildren
+}
+
+struct datumChildren: Decodable {
+    let children: [datumChildData]
+    let after: String
+}
+
+struct datumChildData: Decodable {
+    let data: PostModel
+}
+
+
+

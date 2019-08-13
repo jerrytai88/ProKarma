@@ -6,4 +6,11 @@
 //  Copyright © 2019 Yu Tai. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class PostTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var postImage: UIImageView!
+    
+    @IBOutlet weak var title: UILabel!
+}
